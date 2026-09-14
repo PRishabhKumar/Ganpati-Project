@@ -57,15 +57,15 @@
     /* phase 1 — the pen: outline, stroke by stroke */
     inks.forEach((el) => {
       const len = +el.dataset.len;
-      const dur = Math.max(170, Math.min(820, len * 1.35));
+      const dur = Math.max(150, Math.min(680, len * 1.1));
       const a = el.animate(
         [{ strokeDashoffset: len + 3 }, { strokeDashoffset: 0 }],
         { duration: dur, delay: t, easing: "cubic-bezier(.45,.05,.35,1)", fill: "both" }
       );
       animations.push(a);
-      t += dur * 0.68;
+      t += dur * 0.6;
     });
-    const linesEnd = t + 420;
+    const linesEnd = t + 320;
 
     /* phase 2 — the paint: watercolor washes bloom in */
     let tw = linesEnd;
@@ -76,13 +76,13 @@
           { opacity: 0, transform: "scale(.72)" },
           { opacity: target, transform: "scale(1)" },
         ],
-        { duration: 760, delay: tw, easing: "cubic-bezier(.2,.7,.3,1)", fill: "both" }
+        { duration: 700, delay: tw, easing: "cubic-bezier(.2,.7,.3,1)", fill: "both" }
       );
       a.onfinish = () => { el.style.opacity = target; };
       animations.push(a);
-      tw += 92;
+      tw += 75;
     });
-    const paintEnd = tw + 500;
+    const paintEnd = tw + 420;
 
     /* phase 3 — the world: background blooms around Him */
     setTimeout(() => {
@@ -95,7 +95,7 @@
       intro.classList.add("welcome");
       skipBtn.style.display = "none";
       window.FX && window.FX.bell();
-    }, paintEnd + 1500);
+    }, paintEnd + 1200);
   }
 
   function skip() {
