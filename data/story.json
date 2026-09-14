@@ -1,0 +1,118 @@
+{
+  "title": "Bappa, Year After Year",
+  "tagline": "Ten Septembers of Ganpati at our home",
+  "range": "2016 – 2026",
+  "prologue": {
+    "deva": "श्री गणेशाय नमः",
+    "stanza": "Every year the same guest arrives. Every year the house is a little different, the hands a little taller — and the love, <em>exactly the same</em>.",
+    "hint": "scroll slowly, this is a memory"
+  },
+  "years": [
+    {
+      "year": 2016,
+      "accent": "#e8a33d",
+      "layout": "scatter",
+      "marathi": "सुरुवात",
+      "title": "The year small hands learned to hold Bappa",
+      "body": "It begins the way every good story in our house does — a small idol on a steel tray, marigolds strung by hand, and someone very young holding Bappa like the most precious thing in the world. Because for that one week, He is. Look closely: there is a modak resting on a betel leaf, and a red throne waiting in the corner of the room."
+    },
+    {
+      "year": 2018,
+      "accent": "#5b9db4",
+      "layout": "cinema",
+      "marathi": "निरोप",
+      "title": "Bappa crosses the water",
+      "body": "A boat, a river the colour of monsoon, and hands steadying the crown against the wind. Visarjan day — the loudest silence of the year. We wave until the boat is only a dot, then walk home lighter and heavier at once.",
+      "cinema_caption": "…and the river carries Him home, until next year."
+    },
+    {
+      "year": 2019,
+      "accent": "#d4577a",
+      "layout": "scatter",
+      "marathi": "दर्शन",
+      "title": "Close enough to count the petals",
+      "body": "This year the camera stayed shy and stood near — near the silver crown, near the coin pressed into His palm, near the living room strung with paper garlands and balloons. Some years are not wide shots. Some years are just a face you could look at for hours."
+    },
+    {
+      "year": 2020,
+      "accent": "#e2703a",
+      "layout": "filmstrip",
+      "marathi": "घरी",
+      "title": "The year Bappa stayed home",
+      "body": "The world locked its doors, so we opened ours wider. Watch the mandap rise frame by frame — an empty throne, then lights, then flowers, then the whole family standing at a careful, loving distance. No procession, no crowd, no traffic of drums. Only us, and Him, and aarti at dusk."
+    },
+    {
+      "year": 2021,
+      "accent": "#58a08a",
+      "layout": "masonry",
+      "marathi": "वाढ",
+      "title": "Same wall, taller hands",
+      "body": "The blue wall, the framed deity above the sofa, the marigold sunflowers pinned to the curtain — the stage never changes. But look at the hands holding the tray: a little taller, a little steadier, every single year. Growth is not something you can see day to day. Only September notices."
+    },
+    {
+      "year": 2022,
+      "accent": "#d4678c",
+      "layout": "masonry",
+      "marathi": "उत्सव",
+      "title": "Everyone dresses up for Him",
+      "body": "Veshtis ironed, saris pinned, a group selfie squeezed into one arm's reach. Behind them the mandap glows pink and white with fairy lights, and for five days the living room is not a living room — it is a temple that happens to own a sofa."
+    },
+    {
+      "year": 2023,
+      "accent": "#e6b422",
+      "layout": "masonry",
+      "marathi": "पिवळा",
+      "title": "Yellow, like every September should be",
+      "body": "Marigold ropes on white curtains, a rangoli blooming on the tiles, fruits stacked like little offerings of patience. This is the year our altar learned to glow — yellow cloth, yellow light, yellow everywhere you look. Even the photographs came out warm."
+    },
+    {
+      "year": 2024,
+      "accent": "#c05299",
+      "layout": "masonry",
+      "video": "Assets/2024/VID-20260913-WA0052.mp4",
+      "video_caption": "the year we pressed record",
+      "marathi": "चित्र",
+      "title": "The year we pressed record",
+      "body": "Bougainvillea pink against the copper halo, a blue floral arch overhead, and for the first time — a video. Movement, laughter, someone's hand reaching in to adjust a leaf. Press play; this memory refuses to sit still."
+    },
+    {
+      "year": 2025,
+      "accent": "#d43d2a",
+      "layout": "masonry",
+      "marathi": "कुटुंब",
+      "title": "Three generations, one tray",
+      "body": "The busiest September yet: garlands hung in red Vs down the wall, modaks counted twice, and the idol passing from hand to hand — Appa, Aai, the little ones on tiptoe reaching in. Fifty-five frames, and not one of them is really about the idol. They are about the hands around it."
+    },
+    {
+      "year": 2026,
+      "accent": "#8fbf6f",
+      "layout": "filmstrip",
+      "marathi": "पुढचं वर्ष",
+      "title": "Choosing Bappa — the story continues",
+      "body": "Every year begins the same way: a shop full of gods, and us wandering the shelves until one of them looks back. This year's throne is dressed and waiting — the garlands are up, the cloth is pressed, the candles are out of the box. Bappa is coming home again."
+    }
+  ],
+  "interlude_2017": "2017 kept no photographs. Some years live only in memory — and memory, unlike a phone, <em>never runs out of space</em>.",
+  "thennow": {
+    "title": "The same hands",
+    "lede": "Drag the line. Nine years apart, the grip is identical — only the arms grew.",
+    "left": 2016,
+    "right": 2025,
+    "caption": "2016 → 2025 · the idol changes, the hands grow, the devotion doesn't move an inch."
+  },
+  "counters": {
+    "title": "Counting the blessings",
+    "items": [
+      { "value": 10, "suffix": "", "label": "Septembers" },
+      { "value": 133, "suffix": "", "label": "photographs" },
+      { "value": 10, "suffix": "", "label": "idols welcomed" },
+      { "value": 1, "suffix": "", "label": "family" }
+    ]
+  },
+  "finale": {
+    "deva_big": "गणपती बप्पा मोरया!",
+    "deva_sub": "पुढच्या वर्षी लवकर या…",
+    "eng": "Come back soon, next year. The throne will be ready — it always is. And we will be standing in the same doorway, a little taller, waiting to carry You home.",
+    "footer": "Made with love, for our family · ten years of Bappa, 2016–2026 · गणपती बप्पा मोरया"
+  }
+}
