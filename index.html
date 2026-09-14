@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bappa, Year After Year · a family memory journey</title>
+  <meta name="description" content="Ten Septembers of Ganpati at our home, 2016–2026 — a scrollable memory journey through every photograph, every year. Ganpati Bappa Morya.">
+  <meta name="theme-color" content="#0b0708">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪔</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;600;700&family=Noto+Serif+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="locked">
+
+  <canvas id="petals" aria-hidden="true"></canvas>
+
+  <div id="progress" aria-hidden="true"><div id="progress-fill"></div></div>
+
+  <nav id="rail" aria-label="Jump to a year"></nav>
+  <div id="yearbadge" aria-hidden="true"></div>
+  <button id="snd" aria-label="toggle the bells">🔔</button>
+
+  <!-- ================= INTRO : the drawing ================= -->
+  <div id="intro" role="dialog" aria-label="Welcome — Lord Ganesha being drawn">
+    <div class="bg-bloom"></div>
+    <div class="mandala" aria-hidden="true"></div>
+    <div class="mandala m2" aria-hidden="true"></div>
+    <div id="intro-glow" aria-hidden="true"></div>
+    <button id="skip-intro">skip ⟶</button>
+    <div id="intro-inner">
+      <!--GANESHA_SVG:start-->
+      <svg id="ganesha-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 566" role="img" aria-label="Lord Ganesha being drawn, line by line">
+        <defs>
+          <filter id="washblur" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="7"/>
+          </filter>
+          <filter id="washblur-m" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="5"/>
+          </filter>
+          <filter id="washblur-s" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur stdDeviation="3.2"/>
+          </filter>
+          <linearGradient id="inkgrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffedbb"/><stop offset=".45" stop-color="#e9b949"/><stop offset="1" stop-color="#cf9030"/>
+          </linearGradient>
+        </defs>
+
+        <!-- ============ COLOR WASHES (phase 2) ============ -->
+        <g id="wash-layer" filter="url(#washblur)">
+          <circle  class="wash" data-i="0" cx="260" cy="190" r="120" fill="#f0a03c" opacity=".18"/>
+          <ellipse class="wash" data-i="1" cx="260" cy="100" rx="36" ry="34" fill="#f5c356" opacity=".85"/>
+          <ellipse class="wash" data-i="2" cx="260" cy="182" rx="62" ry="52" fill="#ffb469" opacity=".8"/>
+          <ellipse class="wash" data-i="3" cx="150" cy="196" rx="44" ry="46" fill="#e08098" opacity=".62"/>
+          <ellipse class="wash" data-i="4" cx="370" cy="196" rx="44" ry="46" fill="#e08098" opacity=".62"/>
+          <ellipse class="wash" data-i="5" cx="238" cy="262" rx="13" ry="44" fill="#ffb469" opacity=".8" transform="rotate(16 238 262)"/>
+          <ellipse class="wash" data-i="6" cx="260" cy="346" rx="70" ry="60" fill="#ffb469" opacity=".62"/>
+          <ellipse class="wash" data-i="7" cx="260" cy="404" rx="74" ry="26" fill="#e04a2f" opacity=".8"/>
+          <ellipse class="wash" data-i="8" cx="260" cy="436" rx="84" ry="16" fill="#ffb469" opacity=".55"/>
+          <ellipse class="wash" data-i="9" cx="260" cy="466" rx="96" ry="16" fill="#e2678a" opacity=".62"/>
+        </g>
+        <g id="wash-mid" filter="url(#washblur-m)">
+          <circle  class="wash" data-i="10" cx="232" cy="272" r="10" fill="#ff9a2e" opacity=".95"/>
+          <circle  class="wash" data-i="11" cx="246" cy="284" r="10" fill="#f07f2a" opacity=".95"/>
+          <circle  class="wash" data-i="12" cx="260" cy="288" r="10" fill="#ff9a2e" opacity=".95"/>
+          <circle  class="wash" data-i="13" cx="274" cy="284" r="10" fill="#f07f2a" opacity=".95"/>
+          <circle  class="wash" data-i="14" cx="288" cy="272" r="10" fill="#ff9a2e" opacity=".95"/>
+          <ellipse class="wash" data-i="15" cx="122" cy="198" rx="18" ry="16" fill="#ef6f9a" opacity=".8"/>
+          <ellipse class="wash" data-i="16" cx="334" cy="362" rx="13" ry="12" fill="#fff3d8" opacity=".95"/>
+          <ellipse class="wash" data-i="17" cx="384" cy="494" rx="26" ry="10" fill="#fff3d8" opacity=".9"/>
+          <ellipse class="wash" data-i="18" cx="140" cy="496" rx="18" ry="12" fill="#a08c82" opacity=".7"/>
+          <ellipse class="wash" data-i="19" cx="406" cy="192" rx="12" ry="15" fill="#f5c356" opacity=".7"/>
+        </g>
+        <g id="wash-detail" filter="url(#washblur-s)">
+          <circle class="wash" data-i="20" cx="237" cy="182" r="4.5" fill="#2b1b12" opacity=".95"/>
+          <circle class="wash" data-i="21" cx="283" cy="182" r="4.5" fill="#2b1b12" opacity=".95"/>
+          <circle class="wash" data-i="22" cx="260" cy="150" r="4"   fill="#c0392b" opacity=".9"/>
+          <circle class="wash" data-i="23" cx="260" cy="362" r="3.5" fill="#b06a2a" opacity=".8"/>
+        </g>
+
+        <!-- ============ LINE ART (phase 1) ============ -->
+        <g id="line-layer" fill="none" stroke="url(#inkgrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+          <!-- torana arch behind the head -->
+          <path class="ink" data-i="0" d="M148,258 C140,190 184,124 260,114 C336,124 380,190 372,258"/>
+          <path class="ink" data-i="1" d="M162,258 C155,196 194,136 260,127 C326,136 365,196 358,258" stroke-width="2.2" opacity=".7"/>
+          <!-- crown -->
+          <path class="ink" data-i="2" d="M260,86 C251,74 251,60 260,50 C269,60 269,74 260,86 Z"/>
+          <path class="ink" data-i="3" d="M244,88 Q260,78 276,88"/>
+          <path class="ink" data-i="4" d="M238,102 Q260,90 282,102"/>
+          <path class="ink" data-i="5" d="M228,120 Q260,98 292,120"/>
+          <!-- face -->
+          <path class="ink" data-i="6" d="M204,136 C198,178 218,216 260,226 C302,216 322,178 316,136 C300,124 220,124 204,136 Z"/>
+          <!-- ears -->
+          <path class="ink" data-i="7"  d="M204,152 C176,136 138,136 116,154 C130,162 136,170 138,182 C140,208 150,236 174,250 C188,258 198,252 202,240"/>
+          <path class="ink" data-i="8"  d="M194,162 C174,158 156,162 146,172" stroke-width="3"/>
+          <path class="ink" data-i="9"  d="M316,152 C344,136 382,136 404,154 C390,162 384,170 382,182 C380,208 370,236 346,250 C332,258 322,252 318,240"/>
+          <path class="ink" data-i="10" d="M326,162 C346,158 364,162 374,172" stroke-width="3"/>
+          <circle class="ink" data-i="11" cx="182" cy="256" r="5" stroke-width="3"/>
+          <circle class="ink" data-i="12" cx="338" cy="256" r="5" stroke-width="3"/>
+          <!-- brows, eyes, tilak -->
+          <path class="ink" data-i="13" d="M222,168 Q238,160 252,168"/>
+          <path class="ink" data-i="14" d="M268,168 Q282,160 298,168"/>
+          <path class="ink" data-i="15" d="M224,182 Q237,174 250,182 Q237,190 224,182 Z"/>
+          <path class="ink" data-i="16" d="M270,182 Q283,174 296,182 Q283,190 270,182 Z"/>
+          <path class="ink" data-i="17" d="M254,142 Q260,157 266,142"/>
+          <!-- trunk: one bold calligraphic stroke -->
+          <path class="ink" data-i="18" d="M258,204 C254,234 246,256 234,276 C222,296 218,310 226,319 C233,327 245,325 247,315 C248,308 243,304 238,306" stroke-width="9.5"/>
+          <path class="ink" data-i="19" d="M246,248 Q254,253 262,247" stroke-width="3"/>
+          <path class="ink" data-i="20" d="M236,270 Q244,275 252,269" stroke-width="3"/>
+          <path class="ink" data-i="21" d="M228,292 Q236,297 244,291" stroke-width="3"/>
+          <!-- tusks -->
+          <path class="ink" data-i="22" d="M278,228 C288,240 291,252 287,264"/>
+          <path class="ink" data-i="23" d="M242,230 C238,238 236,244 237,250"/>
+          <!-- garland -->
+          <path class="ink" data-i="24" d="M226,258 C236,288 284,288 294,258"/>
+          <!-- body -->
+          <path class="ink" data-i="25" d="M214,250 C186,278 174,330 184,376 C192,412 220,430 260,430 C300,430 328,412 336,376 C346,330 334,278 306,250"/>
+          <path class="ink" data-i="26" d="M232,356 Q260,370 288,356" stroke-width="3"/>
+          <path class="ink" data-i="27" d="M196,398 Q260,418 324,398"/>
+          <!-- upper left arm + lotus -->
+          <path class="ink" data-i="28" d="M214,262 C180,254 150,238 126,212 M210,276 C178,268 152,252 132,226"/>
+          <path class="ink" data-i="29" d="M122,214 C112,202 112,188 122,180 C132,188 132,202 122,214 Z"/>
+          <path class="ink" data-i="30" d="M122,214 C108,208 102,196 106,186"/>
+          <path class="ink" data-i="31" d="M122,214 C136,208 142,196 138,186"/>
+          <!-- upper right arm + abhaya palm -->
+          <path class="ink" data-i="32" d="M306,262 C340,254 370,238 394,210 M310,276 C342,268 368,252 388,226"/>
+          <path class="ink" data-i="33" d="M394,206 C392,188 398,176 406,174 C414,176 420,188 418,206 C414,212 398,212 394,206 Z"/>
+          <path class="ink" data-i="34" d="M400,176 L399,162 M406,174 L406,160 M412,176 L413,162" stroke-width="3.5"/>
+          <path class="ink" data-i="35" d="M394,194 C388,190 386,184 388,178" stroke-width="3.5"/>
+          <!-- lower arms -->
+          <path class="ink" data-i="36" d="M192,330 C180,344 176,362 186,374"/>
+          <path class="ink" data-i="37" d="M178,376 Q188,386 200,378"/>
+          <path class="ink" data-i="38" d="M328,330 C340,344 344,362 334,374"/>
+          <path class="ink" data-i="39" d="M324,372 C324,362 330,356 334,348 C338,356 344,362 344,372 Q334,379 324,372 Z"/>
+          <!-- crossed legs -->
+          <path class="ink" data-i="40" d="M200,410 C176,418 166,436 176,450 C188,462 224,458 244,446"/>
+          <path class="ink" data-i="41" d="M320,410 C344,418 354,436 344,450 C332,462 296,458 276,446"/>
+          <path class="ink" data-i="42" d="M244,446 Q260,452 276,446"/>
+          <path class="ink" data-i="43" d="M252,452 Q260,460 270,452" stroke-width="3"/>
+          <!-- lotus seat -->
+          <path class="ink" data-i="44" d="M168,454 Q188,476 208,456"/>
+          <path class="ink" data-i="45" d="M208,456 Q228,478 248,458"/>
+          <path class="ink" data-i="46" d="M248,458 Q268,478 288,456"/>
+          <path class="ink" data-i="47" d="M288,456 Q308,476 328,454"/>
+          <path class="ink" data-i="48" d="M160,458 Q260,490 360,458"/>
+          <!-- ground -->
+          <path class="ink" data-i="49" d="M104,506 Q260,522 416,506" stroke-width="3"/>
+          <!-- mouse -->
+          <path class="ink" data-i="50" d="M126,498 C126,484 146,480 154,490 C161,499 155,508 142,508 C132,508 126,505 126,498 Z"/>
+          <circle class="ink" data-i="51" cx="140" cy="484" r="6"/>
+          <path class="ink" data-i="52" d="M126,502 C114,506 108,498 112,492"/>
+          <!-- modak plate -->
+          <path class="ink" data-i="53" d="M356,500 Q384,512 412,500"/>
+          <path class="ink" data-i="54" d="M364,498 C364,490 368,486 371,482 C374,486 378,490 378,498"/>
+          <path class="ink" data-i="55" d="M378,498 C378,490 382,486 385,482 C388,486 392,490 392,498"/>
+          <path class="ink" data-i="56" d="M392,498 C392,490 396,486 399,482 C402,486 406,490 406,498"/>
+        </g>
+      </svg>
+      <!--GANESHA_SVG:end-->
+      <div id="welcome">
+        <p class="deva">श्री गणेशाय नमः</p>
+        <h1>Bappa, Year<br>After Year</h1>
+        <p class="sub">Ten Septembers of Ganpati at our home · <b>2016 – 2026</b></p>
+        <button id="begin"><span class="diya-flame">🪔</span>Begin the journey</button><br>
+        <a href="#" id="replay-draw">watch the drawing again</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= THE JOURNEY (built from data/) ================= -->
+  <main id="journey"></main>
+
+  <!-- ================= LIGHTBOX ================= -->
+  <div id="lb" role="dialog" aria-modal="true" aria-label="Photograph viewer">
+    <span class="lb-count"></span>
+    <button class="lb-close" aria-label="Close viewer">✕</button>
+    <button class="lb-btn lb-prev" aria-label="Previous photograph">‹</button>
+    <figure>
+      <img alt="Family photograph">
+      <figcaption></figcaption>
+    </figure>
+    <button class="lb-btn lb-next" aria-label="Next photograph">›</button>
+  </div>
+
+  <noscript>
+    <p style="padding:40px;text-align:center">
+      This memory journey needs JavaScript to draw, scroll and glow.
+      The photographs themselves live in the <code>Assets/</code> folder, year by year.
+    </p>
+  </noscript>
+
+  <script src="js/fx.js"></script>
+  <script src="js/intro.js"></script>
+  <script src="js/journey.js"></script>
+</body>
+</html>
